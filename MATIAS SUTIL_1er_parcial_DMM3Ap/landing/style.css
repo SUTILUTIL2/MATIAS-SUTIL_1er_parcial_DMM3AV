@@ -1,0 +1,352 @@
+/* Reset básico */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo animado de estrellas */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative; 
+  padding-top: 100px; /* Ajusta según el tamaño de tu navbar */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/MR4sI4V.png') repeat;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  text-align: center;
+  padding: 20px 20px;
+  border-bottom: 2px solid #0ff;
+  box-shadow: 0 0 20px #0ff4;
+}
+
+.logo-titulo h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.logo-titulo p {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Secciones generales */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInUp 1s ease;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #0ff;
+  border-bottom: 2px dashed #0ff5;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Canvas banner */
+#banner canvas {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #0ff;
+  box-shadow: 0 0 15px #0ff7;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Descripción */
+#descripcion p {
+  font-size: 1.15rem;
+  color: #eee;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+/* Equipo */
+#equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.miembro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #111;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #0ff4;
+  transition: transform 0.3s ease;
+}
+
+.miembro:hover {
+  transform: scale(1.05);
+}
+
+#equipo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #0ff;
+  box-shadow: 0 0 10px #0ff6;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #999;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #0ff;
+  font-size: 0.9rem;
+  box-shadow: 0 -5px 20px #0ff4;
+}
+
+/* Estilo para los botones */
+.btn {
+  background-color: #0ff; /* Color principal de los botones */
+  color: #000; /* Texto negro */
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #0ff; /* Borde del botón */
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease; /* Transición suave */
+  text-align: center;
+  box-shadow: 0 0 15px #0ff4;
+  margin: 10px 0;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #000; /* Cambio de fondo al pasar el ratón */
+  color: #0ff; /* Cambio de color del texto */
+  border-color: #0ff;
+  box-shadow: 0 0 20px #0ff7; /* Sombra más brillante */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+.btn:active {
+  transform: scale(1); /* Efecto de clic */
+  box-shadow: 0 0 10px #0ff4; /* Sombra más suave al hacer clic */
+}
+
+.btn-container {
+  text-align: center;
+}
+
+/* Icono en la barra de navegación */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.nav-links li a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+
+.nav-icon-right img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+  transition: transform 0.3s;
+}
+
+.nav-icon-right img:hover {
+  transform: scale(1.1);
+}
+
+/* Galería de imágenes generadas */
+.galeria-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.img_generadas {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff5;
+  transition: transform 0.3s;
+}
+
+.img_generadas:hover {
+  transform: scale(1.05);
+}
+
+
+/* Animaciones */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para el navbar */
+nav {
+  background: linear-gradient(135deg, #111 0%, #333 100%);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  /* Para evitar que el contenido quede cubierto por el nav */
+  top: 0;
+  left: 0;
+}
+
+nav:hover {
+  box-shadow: 0 5px 25px rgba(0, 255, 255, 0.5);
+}
+
+/* Estilo de los enlaces */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #0ff;
+  background-color: #000;
+  box-shadow: 0 0 10px #0ff;
+  transform: scale(1.05);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background: #111;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+  }
+
+  nav.active .nav-links {
+    display: flex;
+  }
+
+  nav .menu-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav .menu-toggle:focus {
+    outline: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .miembro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #equipo img {
+    margin-bottom: 15px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}

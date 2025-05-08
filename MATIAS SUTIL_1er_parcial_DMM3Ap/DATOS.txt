@@ -1,0 +1,9 @@
+Carrera: Tecnicatura en Diseño Multimedial Materia: Diseño y Programación Web I Año: 2025 Cuatrimestre: TERCER Cuatrimestr Turno: MAÑANA: Primer Parcial
+
+Docente: [Toyos Omar]
+
+Integrante del grupo:
+Apellido y nombre: Sutil, Matías Agustín
+
+URL del sitio web (versión online si la hay):
+[https://tusitio.github.io/landing/](https://tusitio.github.io/landing/) (o dejar en blanco si es solo local)
